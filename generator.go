@@ -22,28 +22,6 @@ const (
 	ltrn string = "012356789"                  // numbers
 )
 
-type Generator struct{}
-
-// GenerateFull generates a random text that uses all letters of the alphabet, in both cases including numbers
-func (s *Generator) GenerateFull(length int) string {
-	return GenerateFull(length)
-}
-
-// GenerateText generates a random text that uses all letters of the alphabet, in both cases not including numbers
-func (s *Generator) GenerateText(length int) string {
-	return GenerateText(length)
-}
-
-// GenerateSeries generates random numbers
-func (s *Generator) GenerateSeries(length int) string {
-	return GenerateSeries(length)
-}
-
-// GenerateAlpha generates a random text that uses the 26 letters of the alphabet
-func (s *Generator) GenerateAlpha(length int, lower bool) string {
-	return GenerateAlpha(length, lower)
-}
-
 func init() {
 	src = rand.NewSource(time.Now().UTC().UnixNano())
 }
